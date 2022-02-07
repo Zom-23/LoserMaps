@@ -42,9 +42,38 @@ namespace Loser_Maps
 
     public class MapSelection
     {
-        IList<string> activeLevels = (IList<string>)AccessTools.Field(typeof(LevelManager), "activeLevels").GetValue(null);
-        IList<string> inactiveLevels = (IList<string>)AccessTools.Field(typeof(LevelManager), "inactiveLevels").GetValue(null);
-        IList<string> levelsToRedraw = LevelManager.levels.Where(levels. );
-        IDictionary<string, Level> allLevels = LevelManager.levels;
+        //IList<string> activeLevels = (IList<string>)AccessTools.Field(typeof(LevelManager), "activeLevels").GetValue(null);
+        //IList<string> inactiveLevels = (IList<string>)AccessTools.Field(typeof(LevelManager), "inactiveLevels").GetValue(null);
+        readonly IDictionary<string, Level> allLevels = LevelManager.levels;
+        IList<string> activeLevels;
+        //IList<string> inactiveLevels;
+
+        void levelSetup(ref IList<string> active, ref IList<string> inactive, ref IList<string> redraw, IDictionary<string, Level> all)
+        {
+            foreach(KeyValuePair<string, Level> levels in all)
+            {
+                if(levels.Value.enabled)
+                {
+                    active.Add(levels.Key);
+                }
+            }
+        }
+
+
+        string[] maps = new string[3];
+        int[] votes = new int[3];
+
+        string voting()
+        {
+            for(int i = 0; i < 3; i++)
+            {
+                maps[i] = activeLevels[UnityEngine.Random.Range(0, activeLevels.Count())];
+            }
+            int max = votes.Max();
+
+            Predicate<int> maxFinder = (int i) => { return i == max; };
+
+            return maps[Array.FindIndex(votes, maxFinder)];
+        }
     }
 }

@@ -64,6 +64,21 @@
     <Reference Include="PhotonWebSocket">
       <HintPath>..\..\..\ZomC\ZomC-Cards\Libs\ROUNDS\Rounds_Data\Managed\PhotonWebSocket.dll</HintPath>
     </Reference>
+    <Reference Include="Sirenix.OdinInspector.Attributes">
+      <HintPath>..\..\..\ZomC\ZomC-Cards\Libs\ROUNDS\Rounds_Data\Managed\Sirenix.OdinInspector.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.OdinInspector.CompatibilityLayer">
+      <HintPath>..\..\..\ZomC\ZomC-Cards\Libs\ROUNDS\Rounds_Data\Managed\Sirenix.OdinInspector.CompatibilityLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization">
+      <HintPath>..\..\..\ZomC\ZomC-Cards\Libs\ROUNDS\Rounds_Data\Managed\Sirenix.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization.Config">
+      <HintPath>..\..\..\ZomC\ZomC-Cards\Libs\ROUNDS\Rounds_Data\Managed\Sirenix.Serialization.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Utilities">
+      <HintPath>..\..\..\ZomC\ZomC-Cards\Libs\ROUNDS\Rounds_Data\Managed\Sirenix.Utilities.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="UnboundLib">
       <HintPath>..\..\..\ZomC\ZomC-Cards\Libs\UnboundLib.dll</HintPath>
